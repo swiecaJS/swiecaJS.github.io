@@ -3,11 +3,13 @@
 body{
 	color: #2c3e50;
 }
-
+.main-spacer {
+	height: 50px;
+}
 .sidebar {
 	position: fixed;
 	top: 0px;
-	padding-top: 30%;
+	padding-top: 25%;
 	background-color: #202020;
 	color: #fff;
 }

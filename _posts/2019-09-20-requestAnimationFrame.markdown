@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "requestAnimationFrame() - another look at animation"
+title:  "request Animation Frame() - another look at animation"
 date:   2018-09-20 19:39:22 +0200
 categories: javascript animation time setInterval
 ---
