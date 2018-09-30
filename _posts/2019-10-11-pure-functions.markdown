@@ -126,6 +126,7 @@ Console output:
 { name: 'Mike', surname: 'Smith' }
 ```
 > avoid mutability, do not change values reassign them
+
 ```javascript
 const favouriteAnimals = ['cats','dogs','rats']
 // let's remove rats
