@@ -18,18 +18,19 @@ Bubbling means that:
 </form>
 
 ```
-Thanks to that we can for example have an event listener on a ```<form>``` and listen on all child events in one global handler.
+Thanks to that we can, for example, have an event listener on  a ```<form>``` and listen on all child events in one global handler.
 
 ### How to stop it?
 
-The solution for it is ```event.stopPropagation()```. It will stop event propagation but **only** on the current handler. That means when you have multiple handlers for an event, you will stop only current one
+The solution for it is ```event.stopPropagation()```. I It will stop event propagation but **only** on the current handler. That means when you have multiple handlers for an event, you will stop only current one
 
-* Use it when absolutly necesseary - it may be really hard for debuging/refactoring in future. 
-* When you think you may need it - go for *custom events*!
+* Use it when absolutely necessary - it may be really hard for debugging/refactoring in the future.
+* When you think you may need it - go for **custom events**!
 
 ### Capturing - the inverse of bubbling
 
-```addEventListener(..., true)``` can take up third parameter - which inverse the way of event journey. I.e. the event will propagate down in ancestors hierarchy.
+```addEventListener(..., true)``` can take up the third parameter - which inverses the way of event journey. I.e. the event will propagate down in ancestors hierarchy.  
+
 
 
 ### Examples
@@ -40,7 +41,7 @@ The solution for it is ```event.stopPropagation()```. It will stop event propaga
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <br>
-* Propagation stopped - in this example the listener on ```level-four``` has an ```event.stopPropagation``` inside. See what it changes
+* Propagation stopped - in this example the listener on ```level-four``` has an ```event.stopPropagation``` inside - when bubbling path is drawn. See what it changes
 <br>
 <p data-height="420" data-theme-id="0" data-slug-hash="dgPaJY" data-default-tab="result" data-user="khazarr" data-pen-title="#Bubbling - stop propagation" class="codepen">See the Pen <a href="https://codepen.io/khazarr/pen/dgPaJY/">#Bubbling - stop propagation</a> by Karol Świeca (<a href="https://codepen.io/khazarr">@khazarr</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
