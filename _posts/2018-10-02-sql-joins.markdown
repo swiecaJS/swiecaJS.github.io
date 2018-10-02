@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "SQL JOIN 101"
+date:   2018-10-02 20:18:22 +0200
+categories: SQL
+---
+
+![visual cheat sheet](https://i.stack.imgur.com/VQ5XP.png)
+
+* **JOIN** is used to merge mutliple tables into one
+* **LEFT JOIN** is often more practical in data representation, because if will display ALL rows from the LEFT table and fill unknown values with NULL - example below
+
+base data
+```
+mysql> select * from j1;
++----+------------+
+| id | thing      |
++----+------------+
+|  1 | hi         |
+|  2 | hello      |
+|  3 | guten tag  |
+|  4 | ciao       |
+|  5 | buongiorno |
++----+------------+
+
+mysql> select * from j2;
++----+-----------+
+| id | thing     |
++----+-----------+
+|  1 | bye       |
+|  3 | tschau    |
+|  4 | au revoir |
+|  6 | so long   |
+|  7 | tschuessi |
++----+-----------+
+```
+using *classic* INNER JOIN we'll obtain only 3 rows
+```
+mysql> select * from j1 inner join j2 on j1.id = j2.id;
++----+-----------+----+-----------+
+| id | thing     | id | thing     |
++----+-----------+----+-----------+
+|  1 | hi        |  1 | bye       |
+|  3 | guten tag |  3 | tschau    |
+|  4 | ciao      |  4 | au revoir |
++----+-----------+----+-----------+
+```
+using LEFT JOIN we get 5 results
+```
+mysql> select * from j1 left join j2 on j1.id = j2.id;
++----+------------+------+-----------+
+| id | thing      | id   | thing     |
++----+------------+------+-----------+
+|  1 | hi         |    1 | bye       |
+|  2 | hello      | NULL | NULL      |
+|  3 | guten tag  |    3 | tschau    |
+|  4 | ciao       |    4 | au revoir |
+|  5 | buongiorno | NULL | NULL      |
++----+------------+------+-----------+
+```
+rows that do not match are still preserved.
+This is really usefull when creating views
+
+
+---
+References:
+* [Visual Representation of Sql Joins](https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins)
+* [Stackoverflow question with nice explanation](https://stackoverflow.com/questions/9798020/when-to-use-left-join-and-when-to-use-inner-join)
