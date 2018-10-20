@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "What happens when you type an URL in the browser and press enter?"
+date:   2018-10-20 14:18:22 +0200
+categories: dns networking
+---
+
+![dns basic](https://upload.wikimedia.org/wikipedia/commons/7/7e/Dns-rev-1.gif)
+* At the beginning browser checks cache for a DNS record.
+	* first browser cache
+	* second OS cache
+	* then router cache
+	* lastly ISP (Internet Service Provider) cache
+	* if all cache's are empty then request is sent directly to ISP
+* When browser has an IP adress, next a TCP connection is initiated
+	* typically HTTP/HTTPS GET request is send and in order to establish connection a three-way handshake is made.
+		* Client sends SYN packet to server, checks if a new connection could be estabilished
+		* If servers has open ports, that could handle new connection, it will respond with ACKnowlened of the SYN packet. Therefore a SYN/ACK packet is sent back
+		* The client (browser) receives SYN/ACK packet from server and then ACKnowlages himself to server by sending ACK packet
+		* After this polite greetings connection is estabilished and data can be send to browser
+* After That browser has a content to display (HTML is most common)
+
+
+The important thing to know here is that every ISP runs their own DNS servers. At any time you can switch your resolver to some open resolver (Google DNS, Cloudflare, OpenDNS) or even host your own resolver. 
+
+There were times when DNS resolvers were used to block content to users - government forced ISP to block some pages (like Twitter in Turkey). People started spraying 8.8.8.8 on the walls as a workaround to this censorship. 
+
+---
+*resources*
+* [Story about spraying Google DNS in turkey](https://mic.com/articles/85987/turkish-protesters-are-spray-painting-8-8-8-8-and-8-8-4-4-on-walls-here-s-what-it-means#.IUu2L4Y8f)
+* [Why DNS is important](https://dyn.com/blog/dns-why-its-important-how-it-works/)
+* [Medium post - what happens when you press enter](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
+* [Youtube Video - DDoS attack on DNS resolver](https://www.youtube.com/watch?v=Y1frKCKL8xA)
+
