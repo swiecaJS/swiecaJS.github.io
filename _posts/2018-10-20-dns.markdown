@@ -27,7 +27,7 @@ There were times when DNS resolvers were used to block content to users - govern
 
 ---
 *resources*
-* [Story about spraying Google DNS in turkey](https://mic.com/articles/85987/turkish-protesters-are-spray-painting-8-8-8-8-and-8-8-4-4-on-walls-here-s-what-it-means#.IUu2L4Y8f)
+* [Story about spraying Google DNS in Turkey](https://mic.com/articles/85987/turkish-protesters-are-spray-painting-8-8-8-8-and-8-8-4-4-on-walls-here-s-what-it-means#.IUu2L4Y8f)
 * [Why DNS is important](https://dyn.com/blog/dns-why-its-important-how-it-works/)
 * [Medium post - what happens when you press enter](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
 * [Youtube Video - DDoS attack on DNS resolver](https://www.youtube.com/watch?v=Y1frKCKL8xA)
