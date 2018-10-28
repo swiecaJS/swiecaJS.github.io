@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "JAM stack - what it is?"
+date:   2018-10-28 10:30:22 +0200
+categories: architecture
+---
+
+JAM - it's an acronym form JavaScript, APis and Markup. It's a modern architecture for fast, client-side oriented web development.
+It is a **static** website - no running servers are needed to show the content. For example, the site might be hosted directly from the CDN.
+
+* JavaScript - handles interaction via external APIs, whole request/response cycle. All logic happens on the client side. A modern JS framework might be used (Vue, React, Angular) but good old plain vanilla js is sufficient. You can use fetch API + ServiceWorkers and have Progressive Web App.
+* Markup - speed's up content generation. 
+* APIs - That is a key to success. All potential server-side logic is extracted to external APIs. It might be your own, or third-party solutions
+
+It is a perfect solution for projects that have**infrequent writes and potentially massive reads**. An ideal example is a blog. Actually, this blog might be considered a JAM stack. It uses Jekyll with Markdown as a template engine. Before deployment, it generates pure ```.html``` files which are hosted directly from Github pages. It does not have a database, where data is stored. 
+
+### Great features of JAM stack
+**It's fast!** No database querying, no template parsing means that you get your content almost immediately. Because all logic happens on client-side and you can leverage client cache.
+You can make your site offline available - remember it's just a html page!
+
+**Easy & Fast deployment cycle!** - just generate your html and push it to the storage. That's it, it works.
+
+**Easy to scale it up** - for example using AWS S3 + CloudFront - your content scales up automatically and can handle a very high load.
+
+### Problems
+* SEO - if JS is needed to show content to your page - web crawler might have problems. There are workarounds to this problem - but I am not a SEO expert.
+* Authentication - if you have a lot of areas that require authentication it might be tricky to implement this properly.
+
+### What can I use? 
+
+#### Generators
+* [VuePress](https://vuepress.vuejs.org/)
+* [nuxt.js - vue clone of next.js](https://nuxtjs.org/)
+* [Jekyll - ruby stastic site generator](https://jekyllrb.com/)
+* [Hugo - go lang static site generator](https://gohugo.io/)
+* [Gatsby.js - React static site generator. It support's GraphQL](https://www.gatsbyjs.org/)
+
+### APIs
+* [Wordpress - really you can use is as a headless API](https://pl.wordpress.org/)
+* [Netlify CMS - opencource content management](https://www.netlifycms.org/)
+* [Strapi - Node.js CMS](https://strapi.io/)
+
+
+---
+*resources*
+* [JAMstack org](https://jamstack.org/)
+* [Dev to blog post](hhttps://dev.to/leomeloxp/what-is-jam-stack-2957)
+* [Podcast about JAM stack with Netlify CEO](https://softwareengineeringdaily.com/2018/10/24/jam-stack-with-phil-hawksworth/)
