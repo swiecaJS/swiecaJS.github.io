@@ -52,7 +52,7 @@ forLoopMap(numbers, square);
 
 Using ```jsperf.com``` the results shown that for this simple setup, the execution time of ```Array.map()``` is **~55% slower**!
 
-![squares results](/assets/img/2018-11-09/squares2.jpg)
+![squares results](/assets/img/2018-11-09/squares2.JPG)
 
 ---
 Then I was curious about what will happen when some recursive function like Fibonacci will be used.
@@ -65,7 +65,7 @@ const fibonacci = (num) => {
 }
 ```
 The results from both iterations over array are almost the same. When stack is overloaded with recursion calls there are no measurable benefits. 
-![fib results](/assets/img/2018-11-09/fib2.jpg)
+![fib results](/assets/img/2018-11-09/fib2.JPG)
 
 ### Conclusion
 
