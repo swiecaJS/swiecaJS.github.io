@@ -10,16 +10,16 @@ The binary search algorithm allows you to efficiently check if the value exists 
 ### The algorithm
 
 Let's start with a story, which will help you understand how it works. Imagine you enter first time a big library. You see in front of you 12 bookshelves. Those bookshelves have only number on them and do not have any information about letters. You want to rent a Harry Potter book.
-![User approach bookshelves](/assets/img/binary-search/1.png)
+![User approach bookshelves](/assets/img/binary-search/1.PNG)
 
 Ok, so there are 26 letters in the alphabet. H is the 7th letter. But you know that the number of books for each letter is not equal. Therefore you decide to check what letter is in the middle. And then you'll choose either left or right part. At the shelf number 6, you see the letter **K**.
-![User approach cut data in half](/assets/img/binary-search/2.png)
+![User approach cut data in half](/assets/img/binary-search/2.PNG)
 
 A ha! So you know that there is **no way** that your Harry Potter book will be in the shelves greater than 6. So where it might be? You decide to check what letter will be between shelves 3 and 4, in the middle of the 'data' which is still available.
-![ANother cut in half of data](/assets/img/binary-search/3.png)
+![ANother cut in half of data](/assets/img/binary-search/3.PNG)
 You see the letter **E**. So there is not possible that your book will be somewhere on the shelves 1-3. You eliminate them. Now you have only shelves 4,5,6. You check the middle one. Shelve number 5. And there it is! Letter **H**. 
 
-![Final result](/assets/img/binary-search/4.png)
+![Final result](/assets/img/binary-search/4.PNG)
 
 Ok, you see the pattern now? You always cut the data in half, and check what's in the middle. 
 
