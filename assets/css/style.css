@@ -9,9 +9,13 @@ body{
 .sidebar {
 	position: fixed;
 	top: 0px;
-	padding-top: 25%;
 	background-color: #202020;
 	color: #fff;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	min-height: auto!important;
 }
 
 .sidebar-header {
@@ -42,6 +46,10 @@ a.nav-link:hover { color: #777; }
 	font-size: 11px;
 	margin: 0 auto;
 	margin-bottom: 10px;
+	padding: 0 20px;
+}
+div#contact-list {
+    padding-top: 1em;
 }
 
 #contact-list li .fa,
@@ -80,6 +88,7 @@ article .share .gplus:hover {
 
 #contact-list-secondary {
 	padding-bottom: 10px;
+	display: block
 }
 
 .page-header {
@@ -112,9 +121,17 @@ article {
 	padding: 0 5% 0;
 }
 
+article.sidebar__wrapper {
+    margin: 0;
+}
+
 article.home div a, article.home pre a { color: #2c3e50; }
 article.home div a:hover, article.home pre a:hover { color: #2c3e50; text-decoration: none; }
-article img { max-width: 100%; }
+article img { 
+	max-width: 100%; 
+	display: block;
+	margin: 0 auto;
+}
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', sans-serif; }
 article.home h1,
