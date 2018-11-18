@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mobile - resizing height beacuse of dissapearing scroll bar"
-date: 2018-11-09 21:49:22 +0200
+date: 2018-11-12 21:49:22 +0200
 categories: rwd css
 ---
 
