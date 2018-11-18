@@ -5,19 +5,19 @@ date: 2018-11-18 11:49:22 +0200
 categories: algorithms
 ---
 
-The binary search algorithm allows you to efficiently check if value exists and get there index from an array. It does not need to iterate over the whole array which complexity is  ```O(n)``` . But thanks to it's design it can find solution in ```O(log n)``` time. But the important precondition is fact, that array **must be sorted**.
+The binary search algorithm allows you to efficiently check if the value exists and get there index from an array. It does not need to iterate over the whole array which complexity is  ```O(n)``` . But thanks to its design it can find the solution in ```O(log n)``` time. But the important precondition is fact, that array **must be sorted**.
 
 ### The algorithm
 
-Let's start with a story, which will help you understand how it works. Imagine you enter first time a big library. You see in front of you 12 bookshelves. Those bookshelves has only number on them, and does not have any information about letters. You want to rent a Harry Potter book.
+Let's start with a story, which will help you understand how it works. Imagine you enter first time a big library. You see in front of you 12 bookshelves. Those bookshelves have only number on them and do not have any information about letters. You want to rent a Harry Potter book.
 ![User approach bookshelves](/assets/img/binary-search/1.png)
 
-Ok, so there are 26 letters in alfabet. H is a 7th letter. But you know that the number of books for each letter is not equal. Therefore you decide to check what letter is in the middle. And then you'll choose either left or rigth part. At the shelf number 6 you see the letter **K**.
+Ok, so there are 26 letters in the alphabet. H is the 7th letter. But you know that the number of books for each letter is not equal. Therefore you decide to check what letter is in the middle. And then you'll choose either left or right part. At the shelf number 6, you see the letter **K**.
 ![User approach cut data in half](/assets/img/binary-search/2.png)
 
-A ha! So you know that there is **no way** that your Harry Potter book will be in the sleves greater than 6. So where it might be? You decide to check what letter will be between shelfs 3 and 4, in the middle of the 'data' which is still availible.
+A ha! So you know that there is **no way** that your Harry Potter book will be in the shelves greater than 6. So where it might be? You decide to check what letter will be between shelves 3 and 4, in the middle of the 'data' which is still available.
 ![ANother cut in half of data](/assets/img/binary-search/3.png)
-You see the letter **E**. So there is not possible that your book will be somwhere on the shelves 1-3. You elminiate them. Now you have only shelves 4,5,6. You check the middle one. Shelve number 5. And there it is! Letter **H**. 
+You see the letter **E**. So there is not possible that your book will be somewhere on the shelves 1-3. You eliminate them. Now you have only shelves 4,5,6. You check the middle one. Shelve number 5. And there it is! Letter **H**. 
 
 ![Final result](/assets/img/binary-search/4.png)
 
