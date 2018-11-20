@@ -1,9 +1,7 @@
-
-
 ---
 layout: post
 title: "Factory functions vs classes"
-date: 2018-11-20 19:49:22 +0200
+date: 2018-11-20 17:49:22 +0200
 categories: javascript-patterns javascript
 ---
 
