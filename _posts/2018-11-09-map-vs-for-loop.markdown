@@ -2,7 +2,7 @@
 layout: post
 title: "Array.prototype.map() vs for loop? - thoughts after Meet.js KRK November "
 date: 2018-11-09 21:49:22 +0200
-categories: performance loops
+categories: performance loops meetups
 ---
 
 ### The meetup
