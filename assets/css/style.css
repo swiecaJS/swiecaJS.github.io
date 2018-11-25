@@ -99,7 +99,12 @@ article .share .gplus:hover {
 @media only screen and (min-width: 768px) {
     .page-header{
         margin-right: 70px;
-    }
+	}
+}
+@media only screen and (max-width: 768px) {
+    .sidebar{
+        display: none !important;
+	}
 }
 
 article{
