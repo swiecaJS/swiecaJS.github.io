@@ -5,16 +5,16 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-disqus: SwiecaJS
-google_analytics: SwiecaJS
-title: SwiecaJS
+disqus: swiecaJS
+google_analytics: swiecaJS
+title: swiecaJS
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: SwiecaJS
+      title: swiecaJS
 
 description: Stylish Jekyll Theme
 author:
