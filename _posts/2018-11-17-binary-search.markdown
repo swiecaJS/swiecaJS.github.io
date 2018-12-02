@@ -87,7 +87,7 @@ const binarySearchRecursive = (data, X, left, right) => {
 
 ### Remarks
 * array must be sorted
-* **MUCH** faster than linear search (remember always looking at the worst case scenario)
+* **MUCH** faster than linear search (remember always looking at the average case scenario)
 
 ---
 *resources*
