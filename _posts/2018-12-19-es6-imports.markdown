@@ -5,7 +5,7 @@ date: 2018-12-19 20:38:22 +0200
 categories: javascript es6
 ---
 
-JavaScript offers us more than one way to handle modules. Each of them is dediceted to the specific situation: client or browser. So, let's dive right in and see how we can use them properly.
+JavaScript offers us more than one way to handle modules. Each of them is dedicated to the specific situation: client or browser. So, let's dive right in and see how we can use them properly.
 
 ### Client side
 
@@ -19,7 +19,7 @@ The most *old-school* way of modules in javascript is just creating multiple ```
 </html>
 ```
 
-But this setup to work proprly require everything important for us to be a **global** variable.
+But this setup to work properly require everything important for us to be a **global** variable.
 
 Thankfully at this moment all modern browser supports ES6 ```import``` keyword.
 <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
@@ -27,7 +27,7 @@ Thankfully at this moment all modern browser supports ES6 ```import``` keyword.
 <a href="http://caniuse.com/#feat=es6-module">Can I Use es6-module?</a> Data on support for the es6-module feature across the major browsers from caniuse.com.
 </p>
 
-Let's see how it would look in code
+Let's see how it would look in the code
 
 ```javascript
 // helpers.js
@@ -45,7 +45,7 @@ import { adder } from './helpers.js'
 </html>
 ```
 
-That's great, because we can import only what we need. However if we would like some more advanced features or support legacy browsers we definitly need some properlu configurated bundler like webpack.
+That's great because we can import only what we need. However, if we would like some more advanced features or support legacy browsers we definitely need some properly configurated bundler like webpack.
 
 ### Server Side
 
@@ -63,11 +63,11 @@ import { adder } from './helpers.js'
 
 ```
 
-Of course if we add configure bundler we can also use ```import/export``` syntax in Node.js. But there are some slight differences:
+Of course, if we add configure bundler we can also use ```import/export``` syntax in Node.js. But there are some slight differences:
 
 **require**
 * dynamic evaluation
-* throws error at runtime
+* throws an error at runtime
 
 **import**
 * static evaluation
@@ -79,6 +79,9 @@ Of course if we add configure bundler we can also use ```import/export``` syntax
 *resources*
 * [StackOverflow disscusion](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export)
 * [ESM & commonJS module differences](http://voidcanvas.com/import-vs-require/)
+
+
+
 
 
 
