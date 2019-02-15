@@ -124,7 +124,7 @@ Let's introduced some short-hand syntax, you can use `#` instead of `v-slot` .Si
 </PostsProvider>
 ```
 ### Summary
-As you can see, **scoped-slots** are a powerful tool. New syntax also makes use of them easier to understand and use in my opinion. I can't wait to use them on production.
+As you can see, **scoped-slots** are a powerful tool. New syntax also makes use of them easier to understand and use in my opinion. I can't wait to use them on production. I made a simple demo - check it out [here](https://modest-cray-7f5a4b.netlify.com/#/)
 
 
 ---
