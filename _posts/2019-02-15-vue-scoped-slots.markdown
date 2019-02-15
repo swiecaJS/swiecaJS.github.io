@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue named and scoped slots - new syntax in 2.6"
-date: 2019-01-14 15:38:22 +0200
+date: 2019-02-15 10:38:22 +0200
 categories: javascript vue
 ---
 
