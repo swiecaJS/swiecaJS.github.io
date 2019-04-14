@@ -2,7 +2,7 @@
 layout: post
 title: "Algorithm challange you might face on the front-end side"
 date: 2019-04-14 09:38:22 +0200
-categories: javascript vue
+categories: javascript
 ---
 
 
