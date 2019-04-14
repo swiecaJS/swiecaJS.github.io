@@ -6,12 +6,12 @@ categories: javascript
 ---
 
 
-Just a regular day in your developer job. You are checking your tasks for today. A client want's a gallery view, with buttons. One big central image, and couples of images at the bottom. User can interact with gallery using two buttons. One will show next images, second will show previous ones. An overview of functionallity below.
+Just a regular day in your developer job. You are checking your tasks for today. A client want's a gallery view, with buttons. One big central image, and couples of images at the bottom. The user can interact with the gallery using two buttons. One will show the next images, second will show previous ones. An overview of functionality below.
 
-Ok, let's face it. If you'll need some gallery with preview you'd probably `npm install` some third party package. Then you'll check the docs, import it somwhere in your code. And after 20 mins you could proudly mark task as done.
+Ok, let's face it. If you'll need some gallery with the preview you'd probably `npm install` some third-party package. Then you'll check the docs, import it somewhere in your code. And after 20 mins you could proudly mark the task as done.
 But you might miss all the **fun** that is happening underneath!
 
-Let's assume, that all of the logic regarding showing images will happen on the **client side**. You will get just an array of images from backend. So actually you have to implement an algorithm for *array traversing*. We'll enapsulate this logic in JavaScript class. Thank's to that, our solution will be framework agnostic.
+Let's assume, that all of the logic regarding showing images will happen on the **client side**. You will get just an array of images from the backend. So actually you have to implement an algorithm for *array traversing*. We'll encapsulate this logic in JavaScript class. Thank's to that, our solution will be framework agnostic.
 
 Let's start modelling our interface:
 ```javascript
@@ -31,7 +31,7 @@ class ImageGallery {
 }
 ```
 
-In *constructor* we provide imagesArray, and we set **currentIndex** to 0. At first, we would like to implement method for just changing image to next one. So what conditions should outr **nextImage** method has? We definitely want to increment **currentIndex**, but on the other hand we don't want to be outside of array.
+In *constructor* we provide imagesArray, and we set **currentIndex** to 0. At first, we would like to implement a method for just changing the image to the next one. So what conditions should our **nextImage** method have? We definitely want to increment **currentIndex**, but on the other hand, we don't want to be outside of the array.
 
 ```javascript
 nextImage() {
@@ -43,9 +43,9 @@ nextImage() {
 }
 ```
 
-First idea might be something like this. If our current index is greater than array length, return 0 (which is first object of array). But is it ok?
+The first idea might be something like this. If our current index is greater than array length, return 0 (which is the first object of an array). But is it ok?
 
-Let's try with array with two items ['a', 'b']
+Let's try with an array with two items ['a', 'b']
 
 ```javascript
 const gallery = new ImageGallery(["a", "b");
@@ -65,7 +65,7 @@ gallery.nextImage();
 ```
 
 Having in mind that array start's at 0 in JS, we just get out of our **imagesArray** scope. And our call to **getMainImage()** will return *undefined*.
-We need to substract 1 from total array length to make it work!
+We need to subtract 1 from total array length to make it work!
 
 
 ```javascript
@@ -78,9 +78,9 @@ We need to substract 1 from total array length to make it work!
   }
 ```
 
-Ok, now we would like to have ability to go to the previous image. The logic will be simmilar.
-* If current index is greater than 0, substract 1
-* If our current index is equal to 0, we need to the last element, therefore it will be equal to imagesArray lenght - 1.
+Ok, now we would like to have the ability to go to the previous image. The logic will be similar.
+* If current index is greater than 0, subtract 1
+* If our current index is equal to 0, we need to the last element, therefore it will be equal to imagesArray length - 1.
 
 
 ```javascript
@@ -92,7 +92,7 @@ Ok, now we would like to have ability to go to the previous image. The logic wil
     }
 ```
 
-Ok so we have basic functionality, now it's time to look where it's really interesting. We would like to have 2 images at the bottom of the main image, and display next images. To imagine that look at this example
+Ok so we have basic functionality, now it's time to look where it's really interesting. We would like to have 2 images at the bottom of the main image and display the next images. To imagine that look at this example
 
 ```javascript
 const images = ['a','b','c',]
@@ -125,7 +125,7 @@ ab]cdefg[h
 */
 ```
 
-Do you see the pattern? We need to present the *next* three ones. Having in mind that our array ends somwhere. Let's start by extracting our method for getting next index. Also we need to obtain gallery indexes and then when we have indexes we can get gallery values. We start with gallery size fixed to two.
+Do you see the pattern? We need to present the *next* three ones. Having in mind that our array ends somewhere. Let's start by extracting our method for getting the next index. Also, we need to obtain gallery indexes and then when we have indexes we can get gallery values. We start with gallery size fixed to two.
 
 ```javascript
   getNextIndex(currentValue) {
@@ -153,7 +153,7 @@ Do you see the pattern? We need to present the *next* three ones. Having in mind
 
 ```
 
-Ok. Now let's focus on how our **getNextIndex**  handles new situation. Can you spot the problem?
+Ok. Now let's focus on how our **getNextIndex**  handles the new situation. Can you spot the problem?
 
 ```javascript
 const gallery = new ImageGallery(["a", "b", "c", "d"]);
@@ -162,14 +162,14 @@ console.table(gallery);
 ```
 ![](/assets/img/js-image-gallery/console-table-1st-example-0.png)
 
-That's our starting poing, let's select next image three times and see how our gallery handles that
+That's our starting point, let's select the next image three times and see how our gallery handles that
 
 
 ![](/assets/img/js-image-gallery/console-table-1st-example-1.png)
 ![](/assets/img/js-image-gallery/console-table-1st-example-2.png)
 ![](/assets/img/js-image-gallery/console-table-1st-example-3.png)
 
-Can you see that? When currentIndex is equal to 3 -which is the last element. The gallery outputs two time 'a', 'a'. And why it's that?
+Can you see that? When currentIndex is equal to 3 -which is the last element. The gallery outputs two times 'a', 'a'. And why it's that?
 
 Focus on our logic:
  - we obtain gallery by calling *getGalleryIndexes* first
@@ -211,9 +211,9 @@ Focus on our logic:
  ```
 
 
-Ok we now exactly where is the problem. How to solve it?
+Ok, we now exactly where is the problem. How to solve it?
 
-We need to add third case to **getNextIndex**! But how it will look like?
+We need to add the third case to **getNextIndex**! But how it will look like?
 
 - if currentIndex is greater do something
 
@@ -236,7 +236,7 @@ return currentValue + 1
 // currentValue 4
 // imagesArray.length - 4
 
- // we are looking for NEXT index, therefore in mind we can quickly calculate that this will be equal to 1
+ // we are looking for NEXT index, therefore in mind, we can quickly calculate that this will be equal to 1
  
  // This case happens when currentValue is greater than array length
 
@@ -247,15 +247,15 @@ return currentValue + 1
 
  // we get 5, which is outside of the array.
  
- // But we know that we are doing circular traversal. Therfore if we get outside, we need to go back to the beginning.
+ // But we know that we are doing circular traversal. Therefore if we get outside, we need to go back to the beginning.
 
- // Therefore we can substract array length!
+ // Therefore we can subtract array length!
 
   if (4 > 4 - 1) {
    return 4 + 1 - 4
  }
 
- // we get our deisred 1 !
+ // we get our desired 1 !
 
 ```
 
@@ -287,7 +287,7 @@ Working example below:
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 
-Now a task for you, can you enhance this, to take gallery size in constructor?
+Now a task for you, can you enhance this, to take gallery size in the constructor?
 
 ---
 
