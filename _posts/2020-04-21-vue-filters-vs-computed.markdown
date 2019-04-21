@@ -184,8 +184,6 @@ This is our setup. In the template, we have the following code:
 {% endraw %}
 {% endhighlight %}
 
-Insert codepen here!
-
 As expected, each time text formatting was needed, the `_trimAndCapitalize()` function was invoked. But what is interesting, the computed property was called only **once** in this flow. 
 
 <hr>
