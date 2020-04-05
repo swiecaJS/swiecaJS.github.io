@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VS Code - TS type check in Javascript files"
+title: "VS Code - TS type check in JavaScript files"
 date: 2020-04-05 11:38:22 +0200
 categories: vscode tools typescript javascript
 ---
